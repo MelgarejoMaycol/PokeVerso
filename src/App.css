@@ -90,6 +90,13 @@
     outline-color: #a0f3e4;
 }
 
+.mensajeCarga {
+    margin: -1rem 0 1.5rem;
+    font-size: 16px;
+    font-weight: bold;
+    color: #077A7D;
+}
+
 .tarjetaPokemon {
     width: 20rem;
     background-color: #077A7D;

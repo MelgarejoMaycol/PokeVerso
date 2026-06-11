@@ -14,7 +14,7 @@ export const Modal = ({ isOpen, isClosed, datosGuardados, onEliminar }) => {
                         <div className='tarjetasFavoritos' key={pokemon.id}>
                             <img src={pokemon.imagen} alt={pokemon.nombre} />
                             <div className='informacion1Favoritos'>
-                                <h2>{pokemon.nombre}</h2>
+                                <h2>#{pokemon.id} {pokemon.nombre}</h2>
                                 <div className="tiposPokemon">
                                     <PokemonTypeIcon type={pokemon.tipos} className="tipoPokemon" />
                                 </div>

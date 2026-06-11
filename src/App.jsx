@@ -11,13 +11,16 @@ function App() {
   const [favoritos, setFavoritos] = useState([]);
   const [modalAbierto, setModalAbierto] = useState(false);
   const [busqueda, setBusqueda] = useState("");
+  const [cargandoTodos, setCargandoTodos] = useState(true);
 
   useEffect(() => {
     const obtenerPokemones = async () => {
-      const datos = await getPokemon(20);
-      const allDatos = await getAllPokemons();
+      const datos = await getPokemon(10);
       setPokemones(datos);
+
+      const allDatos = await getAllPokemons();
       setAllPokemones(allDatos);
+      setCargandoTodos(false);
     }
 
     obtenerPokemones();
@@ -37,11 +40,21 @@ function App() {
     setFavoritos(nuevaLista);
   }
 
-  const resultados = allPokemones.filter((pokemon) =>
-    pokemon.nombre.toLowerCase().includes(busqueda.toLowerCase())
-  );
+  const textoBusqueda = busqueda.trim().toLowerCase();
 
-  const listaPokemones = busqueda ? resultados : pokemones;
+  const resultados = allPokemones.filter((pokemon) => {
+    const nombre = pokemon.nombre.toLowerCase();
+    const id = pokemon.id.toString();
+    const tipos = pokemon.tipos.map((tipo) => tipo.toLowerCase());
+
+    return (
+      nombre.includes(textoBusqueda) ||
+      id.includes(textoBusqueda) ||
+      tipos.some((tipo) => tipo.includes(textoBusqueda))
+    );
+  });
+
+  const listaPokemones = textoBusqueda ? resultados : pokemones;
 
   return (
     <>
@@ -55,10 +68,15 @@ function App() {
             <h2>Lista de Pokémon</h2>
             <input
               type="text"
-              placeholder='Buscar Pokémon...'
+              placeholder='Buscar por nombre, tipo o ID...'
               value={busqueda}
               onChange={(e) => setBusqueda(e.target.value)}
             />
+            {cargandoTodos && (
+              <p className="mensajeCarga">
+                Cargando todos los Pokémon para la búsqueda...
+              </p>
+            )}
             <div className='Pokemones'>
               {listaPokemones.map((pokemon) => (
                 <div key={pokemon.id}>

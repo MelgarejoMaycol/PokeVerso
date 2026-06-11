@@ -9,7 +9,7 @@ function TarjetaPokemon({ pokemon, onGuardar, datosGuardados }) {
     return (
         <>
             <div className='tarjetaPokemon'>
-                <h3>{pokemon.nombre}</h3>
+                <h3>#{pokemon.id} {pokemon.nombre}</h3>
                 <img src={pokemon.imagen} alt={pokemon.nombre} />
                 <div className='detallesPokemon'>
                     <div className="tiposPokemon">
