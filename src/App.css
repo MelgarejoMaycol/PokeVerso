@@ -1,0 +1,213 @@
+.App {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.Encabezado {
+    margin: 2.5rem auto 0;
+    padding: .5rem;
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 50rem;
+    background-color: #077A7D;
+    color: white;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.Encabezado img {
+    width: 4.7rem;
+    height: 4.7rem;
+    margin-top: .2rem;
+    position: relative;
+    top: 1.5rem;
+}
+
+.Encabezado h1 {
+    margin: 0;
+    position: relative;
+    top: -1.4rem;
+}
+
+.Encabezado button {
+    border: none;
+    border-radius: 12px;
+    margin-top: 1.3rem;
+    margin-right: 1rem;
+    padding: 0;
+    width: 8rem;
+    height: 2.5rem;
+    background-color: #7AE2CF;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.Encabezado button:hover {
+    background-color: #a0f3e4;
+}
+
+.Contenido {
+    margin: 2.5rem auto;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    max-width: 70rem;
+    background-color: #7AE2CF;
+}
+
+.PokemonList {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+}
+
+.Pokemones {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: center;
+}
+
+.PokemonList input{
+    border: none;
+    border-radius: 19px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    width: 40rem;
+}
+
+.PokemonList input:focus{
+    outline-color: #a0f3e4;
+}
+
+.tarjetaPokemon {
+    width: 20rem;
+    background-color: #077A7D;
+    border-radius: 12px;
+    margin: .4rem;
+    padding: .2rem 0;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tarjetaPokemon img {
+    width: 9rem;
+    height: 12rem;
+}
+
+.tarjetaPokemon button{
+    border: none;
+    border-radius: 12px;
+    padding: .3rem;
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: bold;
+    background-color: #7AE2CF;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.boton-favorito.boton-deshabilitado {
+  opacity: 0.5;              
+  cursor: not-allowed;       
+  background-color: #a4b0be; 
+}
+
+.LogoFavorito{
+    margin-right: .5rem;
+    position: relative;
+    top: .1rem;
+    color: red;
+}
+
+.detallesPokemon {
+    text-align: start;
+    margin-left: 1.5rem;
+}
+
+.Favoritos {
+    background-color: #06202B;
+    color: white;
+    width: 40rem;
+    position: fixed;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    text-align: center;
+    border-radius: 15px;
+    max-height: calc(100vh - 6rem);
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    scrollbar-width: thin; 
+    scrollbar-color: #077A7D #edf2f700; 
+}
+
+.Favoritos h3{
+    margin-top: 2rem;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.cerrarFavoritos{
+    margin-bottom: 1rem;
+    border: none;
+    padding: .5rem;
+    border-radius: 12px;
+    font-size: 16px;
+    background-color: #077A7D;
+    color: white;
+}
+
+.tarjetasFavoritos {
+    background-color: #077A7D;
+    margin: 1.4rem;
+    padding: .2rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.tarjetasFavoritos img {
+    width: 4rem;
+    margin: 0 2rem;
+}
+
+.informacion1Favoritos {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin: 0;
+    font-size: 12px;
+}
+
+.informacion1Favoritos .tiposPokemon {
+    margin: 0;
+    position: relative;
+    top: -.5rem;
+}
+
+.informacion2Favoritos{
+    margin-left: 2rem;
+}
+
+.tarjetasFavoritos button{
+    color: rgb(189, 2, 2);
+    border: none;
+    background-color: transparent;
+}
+
+.logoEliminarFavorito{
+    font-size: 26px;
+}
