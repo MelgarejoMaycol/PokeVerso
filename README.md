@@ -1,5 +1,9 @@
 # PokeVerso
 
+[![PokeVerso CI](https://github.com/MelgarejoMaycol/PokeVerso/actions/workflows/ci.yml/badge.svg)](https://github.com/MelgarejoMaycol/PokeVerso/actions/workflows/ci.yml)
+
+Proyecto de práctica con **React y Vite**. El CI valida instalación limpia, ESLint y compilación; no se presenta como un proyecto de producción empresarial.
+
 PokeVerso es una aplicación hecha con React y Vite que consume la PokeAPI para mostrar una lista de Pokémon, buscar por nombre y guardar favoritos.
 
 ## Autor
@@ -20,7 +24,7 @@ Maycol Melgarejo
 ## Instalación
 
 ```bash
-npm install
+npm ci
 ```
 
 ## Desarrollo
